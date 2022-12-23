@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     
     func setUpUI(){
         view.addSubview(scrollView)
-        view.addSubview(firstLabel)
-        view.addSubview(secondLabel)
-        view.addSubview(thirdLabel)
+        scrollView.addSubview(firstLabel)
+        scrollView.addSubview(secondLabel)
+        scrollView.addSubview(thirdLabel)
     
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         //scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
         
         scrollView.backgroundColor = .systemYellow
-        scrollView.contentSize = CGSize(width: view.frame.size.width, height: view.frame.size.height*2)
+        scrollView.contentSize = CGSize(width: view.frame.size.width, height: view.frame.size.height*4)
         scrollView.isPagingEnabled = true
         
         //FIRST LABEL-------------------------------------
@@ -56,7 +56,6 @@ class ViewController: UIViewController {
         firstLabel.text = "PURPLE"
         firstLabel.textColor = .white
         firstLabel.textAlignment = .center
-        scrollView.addSubview(firstLabel)
         
         //SECOND LABEL-----------------------------------
         secondLabel.snp.makeConstraints { make in
@@ -69,7 +68,7 @@ class ViewController: UIViewController {
         secondLabel.text = "PINK"
         secondLabel.textColor = .white
         secondLabel.textAlignment = .center
-        scrollView.addSubview(secondLabel)
+        //scrollView.addSubview(secondLabel)
         
         
         //THIRD LABEL-------------------------------------
@@ -83,7 +82,7 @@ class ViewController: UIViewController {
         thirdLabel.text = "ORANGE"
         thirdLabel.textColor = .white
         thirdLabel.textAlignment = .center
-        scrollView.addSubview(thirdLabel)
+        //scrollView.addSubview(thirdLabel)
     }
             
     
